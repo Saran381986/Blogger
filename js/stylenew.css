@@ -1,0 +1,329 @@
+@import url('./fonts.css');
+
+html,body{
+    margin:0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    }
+    
+    /*---------Global Classes--------------*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   /*if we minimize window size want to adjust according view port using this*/
+}
+
+ul{
+    list-style-type: none;
+}
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+h2{
+    font-family: var(--Lexend);
+}
+h3{
+    font-family: var(--Abel);
+    font-size: 1.5rem;
+}
+button .btn{
+border: none;
+border-radius: 2rem;
+padding: 1rem 3rem;
+font-size: 1rem;
+font-family: var(--Livvic);
+cursor: pointer;
+}
+
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+.text-gray{
+    color: var(--text-gray);
+}
+
+    /*----x-----Global Classes-------x-------*/
+    
+
+
+/*Create variable for font-family (Theme fonts)*/
+:root{
+
+/*theme for font-color*/
+--text-gray:#3f4954;
+--text-light:#686666da;
+--bg-color:black;
+--white:white;
+--midnight:green;
+
+/*Gradient color*/
+--sky: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+    /*theme font-family*/
+
+    --Abel:'Abel',cursive;/*here Abel-value,cursive-call back variable */
+    --Anton:'Anton' ,cursive;
+    --Josefin:'Josefin',cursive;
+    --Lexend:'Lexend';
+    --Livvic:'Livvic',cursive;  
+}
+
+
+    /*-------------navbar------------------*/
+    .nav{
+        background:white;
+        padding: 0 2rem;
+        height: 0em;  /*  collapisible navigation menu  */
+        min-height: 20vh;
+        overflow: hidden;
+        transition:height 1s ease-in-out;
+    }
+    
+    .nav .nav-menu{
+        justify-content: space-between;
+      
+    }
+
+    /*----toggle menu -----*/
+    .nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 70%;
+    cursor: pointer;
+    display: none;
+}
+
+    .nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content:flex-end;
+    padding: 1.7rem 0;
+    }
+
+    .nav .toggle-collapse .toggle-icons i{
+        font-size: 1.4rem;
+        color:var(--text-gray);
+    }
+
+    .collapse{
+        height: 40rem;
+    }
+/*--x--toggle menu --x---*/
+
+
+    .nav .nav-items{
+        
+        display: flex;
+        margin: 0;
+    }
+
+    .nav .nav-items .nav-link{
+        padding: 1.6rem 1rem;
+        font-size: 1.1rem;
+        position: relative;
+        font-family: var(--Livvic);
+        font-size: 1.1rem;
+    }
+    .nav .nav-items .nav-link:hover{
+        background-color: var(--midnight);
+    }
+
+    .nav .nav-items .nav-link:hover a{
+        color:var(--white);
+    }
+    .nav .nav-brand a{
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        display: block;
+        font-family: var(--Lexend);
+        font-size: 1.6rem;
+    }
+
+    .nav .social{
+        padding: 1.4rem 0
+    }
+    .nav .social i{
+    padding: 0.2rem;
+    }
+
+    .nav .social i:hover{
+        color:burlywood;
+    }
+
+    
+    /*----X---------navbar------------X------*/
+    
+
+
+/*-----------Main content---------------------------*/
+/*------------Site Title------------*/
+main .site-title{
+    background: url('../assets/Background-image.png');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+main .site-title h1,h3{
+    margin:3rem;
+}
+main .site-title .btn{
+    margin: 1.8rem;
+    background:var(--sky);
+}
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+/*------x----Site Title------x------*/
+
+/*---------------------Blog Carousel-------------------------------*/
+main .blog{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+main .blog .blog-post{
+padding: 6rem;
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0,0, 0.2);
+}
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: 0 .5rem;
+}
+main .blog-content span{
+    display: block;
+}
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);
+}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+/*------------x---------Blog Carousel-----------------------x--------*/
+
+/*------------------Site content and sidebar--------------------------*/
+
+main .site-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+main .post-content{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+main .site-content .post-content > .post-image, .post-title{
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main .site-content .post-content > .post-image, .post-info{
+    background: var(--sky);
+    padding: 1rem;
+    position: relative;  /*made changes here*/
+    bottom: 0%;
+    left: 20vw;
+    border-radius: 3rem
+}
+main .site-content .post-content> .post-image > div{
+    overflow: hidden;
+}
+main .site-content .post-content > .post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+main .site-content .post-content > .post-image .img:hover{
+    transform: scale(1.3);
+}
+
+main .site-content .post-content > .post-image .post-info span{
+    margin: 0 .5rem;
+}
+main .post-content .post-title a{
+    font-family: var(--Anton);
+    font-size: 1.5rem;
+}
+
+.site-content .post-content .post-title .post-btn{
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--sky);
+}
+
+
+
+
+
+/*---------x---------Site content and sidebar--------------x------------*/
+
+
+
+
+
+
+/*------x-----Main content-------------x--------------*/
+
+
+    /*---Viewport is less than or equal to 750px*---*/
+
+    @media only screen and (max-width:750px){
+        .nav .nav-menu, .nav .nav-items{
+            flex-direction: column;
+        }
+
+        .nav toggle-collapse{
+            display: initial;
+        }
+
+       
+    }
+   
+    /*-X--Viewport is less than or equal to 750px-X--*/

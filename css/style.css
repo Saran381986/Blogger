@@ -1,0 +1,26 @@
+html,body{
+margin:0%;
+box-sizing: border-box;
+overflow-x: hidden;
+}
+
+
+
+/*-------------navbar------------------*/
+.nav{
+    background-color: rgb(231, 200, 200);
+    padding: 0 2rem;
+    height: 0em;  /*  collapisible navigation menu  */
+    min-height: 10vh;
+    overflow: hidden;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+}
+
+
+
+
+
+/*----X---------navbar------------X------*/
